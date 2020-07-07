@@ -1,0 +1,22 @@
+[
+    {
+        "fecha": "6 de Julio del 2020",
+        "semaforo": "Rojo",
+        "casosConfirmados": 10115,
+        "casosEnInvestigacion": 2621,
+        "casosDescartados": 19048,
+        "defunciones": 611,
+        "casosRecuperados": 3177,
+        "casosDeTransmisionComunitaria": 9960
+    },
+    {
+        "fecha": "7 de Julio del 2020",
+        "semaforo": "Verde",
+        "casosConfirmados": 10568,
+        "casosEnInvestigacion": 2521,
+        "casosDescartados": 19693,
+        "defunciones": 649,
+        "casosRecuperados": 4394,
+        "casosDeTransmisionComunitaria": 10413
+    }
+]
