@@ -9,24 +9,23 @@
 import UIKit
 
 
-class DatosViewController: UIViewController {
+class DatosViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    let casosData = DataLoader().casosData
-    var casos:CasosData?
+    var casosData = [CasosData]()
     
     
     @IBOutlet weak var fechasTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        downloadJson {
+            self.fechasTableView.reloadData()
+        }
+        
         fechasTableView.delegate = self
         fechasTableView.dataSource = self
     }
-}
-
-
-// MARK: - TableView delegate and Datasource Methods
-extension DatosViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return casosData.count
@@ -35,27 +34,44 @@ extension DatosViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "fechasCell", for: indexPath)
         cell.textLabel?.text = casosData[indexPath.row].fecha
-        cell.textLabel?.font = .boldSystemFont(ofSize: 15 )
-        
-        if casosData[indexPath.row].semaforo == "Rojo" {
-            cell.textLabel?.textColor = .red
-        }
-        else if casosData[indexPath.row].semaforo == "Naranja" {
-            cell.textLabel?.textColor = .orange
-        }
-        else if casosData[indexPath.row].semaforo == "Amarillo" {
-            cell.textLabel?.textColor = .yellow
-        }
-        else {
-            cell.textLabel?.textColor = .green
-        }
+        cell.textLabel?.font = .boldSystemFont(ofSize: 15)
+        cell.textLabel?.textAlignment = .justified
         return cell
         
     }
     
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        if let destination = segue.destination as? CasosViewController {
+            destination.casos = casosData[(fechasTableView.indexPathForSelectedRow?.row)!]
         }
+    }
+    
+    
+    // MARK: - Downloading Json Data
+    
+    
+    func downloadJson(completed: @escaping () -> ()) {
+        
+        let url = URL(string: "https://raw.githubusercontent.com/CarlosCardonaM/jsonCovidGto/master/db.json")
+
+        URLSession.shared.dataTask(with: url!) { (data, response, error) in
+            if error == nil {
+                do {
+                    self.casosData = try JSONDecoder().decode([CasosData].self, from: data!)
+                    
+                    DispatchQueue.main.async {
+                        completed()
+                    }
+                }
+                catch {
+                    print("Json error")
+                }
+                
+            }
+        }.resume()
+    }
+    
     
 }

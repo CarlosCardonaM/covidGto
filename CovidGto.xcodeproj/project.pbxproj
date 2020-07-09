@@ -13,12 +13,11 @@
 		483371DB24B03A1C00879D3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 483371D924B03A1C00879D3C /* Main.storyboard */; };
 		483371DD24B03A2500879D3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 483371DC24B03A2500879D3C /* Assets.xcassets */; };
 		483371E024B03A2500879D3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 483371DE24B03A2500879D3C /* LaunchScreen.storyboard */; };
-		483371EA24B03B3100879D3C /* CoronavirusGuanajuato.json in Resources */ = {isa = PBXBuildFile; fileRef = 483371E924B03B3100879D3C /* CoronavirusGuanajuato.json */; };
 		483371EC24B0409300879D3C /* Extensiones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483371EB24B0409300879D3C /* Extensiones.swift */; };
 		484D5A3624B106F60071BDAF /* DatosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484D5A3524B106F60071BDAF /* DatosViewController.swift */; };
 		484D5A3E24B158D70071BDAF /* CasosData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484D5A3D24B158D70071BDAF /* CasosData.swift */; };
-		484D5A4024B1596C0071BDAF /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484D5A3F24B1596C0071BDAF /* DataLoader.swift */; };
 		484D5A4D24B191270071BDAF /* CasosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484D5A4C24B191270071BDAF /* CasosViewController.swift */; };
+		485B34F124B53ED60093E5B7 /* infoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485B34F024B53ED60093E5B7 /* infoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,12 +29,11 @@
 		483371DC24B03A2500879D3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		483371DF24B03A2500879D3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		483371E124B03A2500879D3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		483371E924B03B3100879D3C /* CoronavirusGuanajuato.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CoronavirusGuanajuato.json; sourceTree = "<group>"; };
 		483371EB24B0409300879D3C /* Extensiones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensiones.swift; sourceTree = "<group>"; };
 		484D5A3524B106F60071BDAF /* DatosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatosViewController.swift; sourceTree = "<group>"; };
 		484D5A3D24B158D70071BDAF /* CasosData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CasosData.swift; sourceTree = "<group>"; };
-		484D5A3F24B1596C0071BDAF /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
 		484D5A4C24B191270071BDAF /* CasosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CasosViewController.swift; sourceTree = "<group>"; };
+		485B34F024B53ED60093E5B7 /* infoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +85,7 @@
 				483371D724B03A1C00879D3C /* ViewController.swift */,
 				484D5A3524B106F60071BDAF /* DatosViewController.swift */,
 				484D5A4C24B191270071BDAF /* CasosViewController.swift */,
+				485B34F024B53ED60093E5B7 /* infoViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -95,7 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				484D5A3D24B158D70071BDAF /* CasosData.swift */,
-				484D5A3F24B1596C0071BDAF /* DataLoader.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -104,7 +102,6 @@
 			isa = PBXGroup;
 			children = (
 				483371EB24B0409300879D3C /* Extensiones.swift */,
-				483371E924B03B3100879D3C /* CoronavirusGuanajuato.json */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -183,7 +180,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				483371EA24B03B3100879D3C /* CoronavirusGuanajuato.json in Resources */,
 				483371E024B03A2500879D3C /* LaunchScreen.storyboard in Resources */,
 				483371DD24B03A2500879D3C /* Assets.xcassets in Resources */,
 				483371DB24B03A1C00879D3C /* Main.storyboard in Resources */,
@@ -199,11 +195,11 @@
 			files = (
 				484D5A3624B106F60071BDAF /* DatosViewController.swift in Sources */,
 				484D5A3E24B158D70071BDAF /* CasosData.swift in Sources */,
-				484D5A4024B1596C0071BDAF /* DataLoader.swift in Sources */,
 				483371D824B03A1C00879D3C /* ViewController.swift in Sources */,
 				484D5A4D24B191270071BDAF /* CasosViewController.swift in Sources */,
 				483371D424B03A1C00879D3C /* AppDelegate.swift in Sources */,
 				483371D624B03A1C00879D3C /* SceneDelegate.swift in Sources */,
+				485B34F124B53ED60093E5B7 /* infoViewController.swift in Sources */,
 				483371EC24B0409300879D3C /* Extensiones.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

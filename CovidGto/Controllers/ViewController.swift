@@ -18,7 +18,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "COVID-19 Gto"
-        view.backgroundColor = .white
         
         imagenGto.layer.borderWidth = 1
         imagenGto.layer.masksToBounds = false
